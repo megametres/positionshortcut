@@ -36,9 +36,51 @@ var position = {
     "use strict";
     registerShortcut("Position window tier top",
       "Position window tier top",
-      "Meta+Shift+i",
+      "Meta+ctrl+1",
       function() {
           position.positionWindow("ca.width", "ca.height / 3", "ca.x", "ca.y");
+      });
+    registerShortcut("Position window two tier top",
+      "Position window two tier top",
+      "Meta+ctrl+2",
+      function() {
+          position.positionWindow("ca.width", "ca.height * 2 / 3", "ca.x", "ca.y");
+      });
+    registerShortcut("Position window tier bottom",
+      "Position window tier bottom",
+      "Meta+ctrl+3",
+      function() {
+          position.positionWindow("ca.width", "ca.height / 3", "ca.x", "ca.y + ca.height * 2 / 3");
+      });
+    registerShortcut("Position window two tier bottom",
+      "Position window two tier bottom",
+      "Meta+ctrl+4",
+      function() {
+          position.positionWindow("ca.width", "ca.height * 2 / 3", "ca.x", "ca.y + ca.height / 3");
+      });
+    registerShortcut("Position window left large",
+      "Position window left large",
+      "Meta+ctrl+5",
+      function() {
+          position.positionWindow("1060", "ca.height", "ca.x", "ca.y");
+      });
+    registerShortcut("Position window right thin",
+      "Position window right thin",
+      "Meta+ctrl+6",
+      function() {
+          position.positionWindow("ca.width - 1060", "ca.height", "ca.x + 1060", "ca.y");
+      });
+    registerShortcut("Position window right thin top",
+      "Position window right thin top",
+      "Meta+ctrl+7",
+      function() {
+          position.positionWindow("ca.width - 1060", "ca.height / 2", "ca.x + 1060", "ca.y");
+      });
+    registerShortcut("Position window right thin bottom",
+      "Position window tier right thin bottom",
+      "Meta+ctrl+8",
+      function() {
+          position.positionWindow("ca.width - 1060", "ca.height / 2", "ca.x + 1060", "ca.y + ca.height / 2");
       });
   },
 
